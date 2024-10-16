@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma Simulation</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid d-flex">
+        <!-- Options Section -->
+        <section class="option border bg-black text-white border-dark p-5">
+            <!-- Rotor Selection -->
+            <div class="select-whell d-flex flex-column">
+                <p class="fw-bold">Select rotors:</p>
+                <div class="btn-group align-self-strech" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check rotor-option " id="btncheck1" autocomplete="off" value="I">
+                    <label class="btn btn-outline-light" for="btncheck1">I</label>
+
+                    <input type="checkbox" class="btn-check rotor-option " id="btncheck2" autocomplete="off" value="II">
+                    <label class="btn btn-outline-light" for="btncheck2">II</label>
+
+                    <input type="checkbox" class="btn-check rotor-option " id="btncheck3" autocomplete="off"
+                        value="III">
+                    <label class="btn btn-outline-light" for="btncheck3">III</label>
+
+                    <input type="checkbox" class="btn-check rotor-option " id="btncheck4" autocomplete="off" value="IV">
+                    <label class="btn btn-outline-light" for="btncheck4">IV</label>
+
+                    <input type="checkbox" class="btn-check rotor-option " id="btncheck5" autocomplete="off" value="V">
+                    <label class="btn btn-outline-light" for="btncheck5">V</label>
+                </div>
+                <p class="rotor-alert text-danger d-none">
+                    Max installed rotor is 3.
+                </p>
+            </div>
+            <div class="installed-whell d-flex flex-row-reverse justify-content-center ">
+                <div class="r-installed rounded text-center d-flex justify-content-center align-items-center">
+                    #
+                </div>
+                <div class="r-installed rounded text-center d-flex justify-content-center align-items-center">
+                    #
+                </div>
+                <div class="r-installed rounded text-center d-flex justify-content-center align-items-center">
+                    #
+                </div>
+            </div>
+            <hr>
+
+            <!-- Rotor Starting Position / Window Configuration-->
+            <p class="fw-bold">Window:</p>
+            <div class="window row d-flex flex-row-reverse mb-2 py-4 bg-secondary rounded">
+                <select class="col initial-set form-select mx-3 py-3" required>
+
+                </select>
+                <select class="col initial-set form-select mx-3 py-3" required>
+
+                </select>
+                <select class="col initial-set form-select mx-3 py-3" required>
+
+                </select>
+            </div>
+            <hr>
+            <!-- Plugboard Option-->
+
+
+            <p class="fw-bold">Plugboard:</p>
+            <div class="plugboard overflow-y-auto overflow-x-hidden">
+                <div class="row mb-2">
+                    <p class="col fw-light">1.</p>
+                    <select class="plugs plug-A form-select col ms-3" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                    <hr class="col mt-3">
+                    <select class="plugs plug-B form-select col me-5" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                </div>
+                <div class="row mb-2">
+                    <p class="col fw-light">2.</p>
+                    <select class="plugs plug-A form-select col ms-3" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                    <hr class="col mt-3">
+                    <select class="plugs plug-B form-select col me-5" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                </div>
+                <div class="row mb-2">
+                    <p class="col fw-light">3.</p>
+                    <select class="plugs plug-A form-select col ms-3" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                    <hr class="col mt-3">
+                    <select class="plugs plug-B form-select col me-5" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                </div>
+                <div class="row mb-2">
+                    <p class="col fw-light">4.</p>
+                    <select class="plugs plug-A form-select col ms-3" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                    <hr class="col mt-3">
+                    <select class="plugs plug-B form-select col me-5" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                </div>
+                <div class="row mb-2">
+                    <p class="col fw-light">5.</p>
+                    <select class="plugs plug-A form-select col ms-3" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                    <hr class="col mt-3">
+                    <select class="plugs plug-B form-select col me-5" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                </div>
+                <div class="row mb-2">
+                    <p class="col fw-light">6.</p>
+                    <select class="plugs plug-A form-select col ms-3" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                    <hr class="col mt-3">
+                    <select class="plugs plug-B form-select col me-5" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                </div>
+                <div class="row mb-2">
+                    <p class="col fw-light">7.</p>
+                    <select class="plugs plug-A form-select col ms-3" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                    <hr class="col mt-3">
+                    <select class="plugs plug-B form-select col me-5" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                </div>
+                <div class="row mb-2">
+                    <p class="col fw-light">8.</p>
+                    <select class="plugs plug-A form-select col ms-3" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                    <hr class="col mt-3">
+                    <select class="plugs plug-B form-select col me-5" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                </div>
+                <div class="row mb-2">
+                    <p class="col fw-light">9.</p>
+                    <select class="plugs plug-A form-select col ms-3" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                    <hr class="col mt-3">
+                    <select class="plugs plug-B form-select col me-5" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                </div>
+                <div class="row mb-2">
+                    <p class="col fw-light">10.</p>
+                    <select class="plugs plug-A form-select col ms-3" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                    <hr class="col mt-3">
+                    <select class="plugs plug-B form-select col me-5" required>
+                        <option value="" selected disabled>-</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--  Machine Section -->
+        <div id="machine" class="machine flex-grow-1 d-flex flex-column align-items-center px-5 py-1">
+            <p class="text-white mb-2 fs-4 fw-bold">SERVICE ENIGMA </p>
+
+            <!-- Debug panel -->
+            <div class="debug-panel d-flex flex-column text-center">
+                <div class="d-inline border-bottom text-center" style="width:max-content; min-width:100%">
+                    <code id="debug"
+                        class="text-uppercase fw-bold font-monospace fs-4 m-0 px-2" >  </code>
+                    </div>
+                    <code id="plainteks" class="text-uppercase font-monospace fs-4 m-0 px-2"></code>
+            </div>
+
+            <div class="row mt-4">
+                <!-- Output (lampboard) -->
+                <div class="col d-flex flex-column">
+                    <p class="text-secondary text-center mb-1">Input</p>
+                    <div id="output" class="lamp border border-dark align-self-center fw-bold">
+                    </div>
+                </div>
+
+                <!-- Input -->
+                <div class="col d-flex flex-column">
+                    <p class="text-secondary text-center mb-1">Output</p>
+                    <div id="input" class="lamp border border-dark align-self-center fw-bold">
+                    </div>
+                </div>
+
+                <hr class="py-2">
+
+            </div>
+
+            <!-- Flow -->
+            <div class="encryption-flow d-flex flex-row-reverse text-center">
+                <!-- plugboard -->
+                <div class="d-flex flex-column ">
+                    <div class="text-secondary ">
+                        <img src="./static/img/plugboard.png">
+                        Plugboard
+                    </div>
+                    <div id="plug-display" class="node plug p-2 border border-dark rounded ">
+                        ==>| <br>
+                        <==| </div>
+                    </div>
+
+                    <!-- ETW -->
+                    <div class="d-flex flex-column">
+                        <div class="text-secondary ">
+                            <img src="./static/img/wheel.svg" height="16" width="16">
+                            ETW
+                        </div>
+                        <div id="etw-display" class="node p-2 border border-dark rounded">
+                            ==> <br>
+                            <== </div>
+                        </div>
+
+                        <!-- Rotor I -->
+                        <div class="d-flex flex-column">
+                            <div class="text-secondary ">
+                                <img src="./static/img/wheel.svg" height="16" width="16">
+                                R I
+                            </div>
+                            <div id="r1-display" class="node r1 p-2  border border-dark rounded">
+                                ==> <br>
+                                <== </div>
+                            </div>
+
+                            <!-- Rotor II -->
+                            <div class="d-flex flex-column">
+                                <div class="text-secondary ">
+                                    <img src="./static/img/wheel.svg" height="16" width="16">
+                                    R II
+                                </div>
+                                <div id="r2-display" class="node r2 p-2  border border-dark rounded">
+                                    ==><br>
+                                    <== </div>
+                                </div>
+
+                                <!-- Rotor III -->
+                                <div class="d-flex flex-column">
+                                    <div class="text-secondary ">
+                                        <img src="./static/img/wheel.svg" height="16" width="16">
+                                        R III
+                                    </div>
+                                    <div id="r3-display" class="node r3 p-2  border border-dark rounded">
+                                        ==><br>
+                                        <== </div>
+                                    </div>
+
+                                    <!-- UKW -->
+                                    <div class="d-flex flex-column">
+                                        <div class="text-secondary">
+                                            <img src="./static/img/wheel.svg" height="16" width="16">
+                                            UKW
+                                        </div>
+                                        <div id="ukw-display" class="node ukw p-2 border border-dark rounded">
+                                            ||> <br>
+                                            ||< </div>
+                                        </div>
+                                    </div>
+                                    <!-- Endof Flow -->
+
+                                </div>
+                            </div>
+                            <script src="static/js/main.js"></script>
+                            <script src="static/js/operation.js"></script>
+                            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+                                integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+                                crossorigin="anonymous"></script>
+                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+                                integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+                                crossorigin="anonymous"></script>
+</body>
+
+</html>
