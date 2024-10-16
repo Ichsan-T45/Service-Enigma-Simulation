@@ -2,7 +2,7 @@
 
 This project simulates the Enigma I machine, also known as the Service Enigma, used by Germany during World War II. I hope this project can provide a better understanding of how the Enigma machine works. The Enigma machine is one of the most famous cryptographic devices in history, and its use had a significant impact on the course of the war.
 
-![alt text](./src/image.png)
+![alt text](./src/screenshoot.png)
 ## Description of the Enigma Machine
 
 The Enigma machine was an electro-mechanical rotor machine used for encryption and decryption of secret messages. It utilized a combination of rotating disks (rotors) and a plugboard to create a complex cipher. The key components of the Enigma machine include:
