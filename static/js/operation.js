@@ -83,7 +83,7 @@ class Display {
             const bottom = yInput > yOutput ? yInput : yOutput
             const distance = bottom - top
             const maxDistance = this.alphabet.length * this.yGap
-            const cpx = this.xInput - this.xInput * distance / maxDistance
+            const cpx = this.xOutput - this.xInput * distance / maxDistance
 
             ctx.moveTo(this.xInput - this.fontSize / 2, yInput);
             ctx.quadraticCurveTo(cpx - this.fontSize / 2, top + distance / 2, this.xInput - this.fontSize / 2, yOutput);
@@ -202,9 +202,11 @@ class Rotor extends CipherComponent{
     }
 
     spin() {
-        this.ofset = this.ofset < 26 ? this.ofset + 1 : 1;
+        this.ofset = (this.ofset+1) %26
         // update index window element
-        initialSet[this.position - 1].value = this.ofset > 9 ? "" + this.ofset : "0" + this.ofset;
+        const value = this.ofset+1;
+        initialSet[this.position - 1].value = value > 9 ? "" + value : "0" + value;
+        console.log(value > 9 ? "" + value : "0" + value)
         // shift alphabet and wiring to match rotor's movement 
         this.alphabet = this.alphabet.slice(1, this.alphabet.length).concat(this.alphabet.slice(0, 1));
         this.wiring = this.wiring.slice(1, this.wiring.length).concat(this.wiring.slice(0, 1));
@@ -273,10 +275,10 @@ class Machine {
     spin() {
 
         if (this.rotor_1.ofset == alphabet.indexOf(this.rotor_1.turnover) + 1) {
-            this.rotor_2.spin()
             if (this.rotor_2.ofset == alphabet.indexOf(this.rotor_2.turnover) + 1) {
                 this.rotor_3.spin()
             }
+            this.rotor_2.spin()
         }
         this.rotor_1.spin()
     }
