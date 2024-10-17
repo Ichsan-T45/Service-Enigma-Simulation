@@ -2,7 +2,7 @@
 
 This project simulates the Enigma I machine, also known as the Service Enigma, used by Germany during World War II. I hope this project can provide a better understanding of how the Enigma machine works. The Enigma machine is one of the most famous cryptographic devices in history, and its use had a significant impact on the course of the war.
 
-![alt text](./src/screenshoot.png)
+![alt text](./src/enigma-demo.gif)
 ## Description of the Enigma Machine
 
 The Enigma machine was an electro-mechanical rotor machine used for encryption and decryption of secret messages. It utilized a combination of rotating disks (rotors) and a plugboard to create a complex cipher. The key components of the Enigma machine include:
@@ -30,6 +30,7 @@ The combination of these elements made the Enigma machine highly secure for its 
   - Processes input and generates encrypted output, visually displaying the steps of encryption.
 
 ## Installation
+### You can try [HERE](https://ichsan-t45.github.io/Service-Enigma-Simulation/), or run on your computer:
 
 1. **Clone this repository**:
    ```bash
@@ -40,9 +41,7 @@ Copy code
     ```bash
     cd enigma-simulator
 
-2. **Open the index.html file in your browser.**:
-
-*Note: Ensure you are using a browser that supports HTML5 and JavaScript.*
+3. **Open the index.html file in your browser.**:
 
 
 ## Usage
